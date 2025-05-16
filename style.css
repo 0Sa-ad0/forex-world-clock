@@ -1,0 +1,72 @@
+:root {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #f0f0f0;
+  --subtext: #aaa;
+  --accent: #00c896;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1em;
+  background: var(--card);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.clock {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock h2 {
+  margin: 0.5em 0;
+  color: var(--accent);
+}
+
+.label {
+  font-weight: bold;
+  color: var(--subtext);
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: var(--subtext);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .clock {
+    margin: 1em;
+  }
+}
